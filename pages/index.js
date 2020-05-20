@@ -1,17 +1,18 @@
 import React from "react";
-import Link from "next/link";
+
+import Layout from "../components/Layout";
+import GlobalStyle from "../styles/global";
 
 // import { Container } from './styles';
 
 function Index() {
   return (
-    <div>
-      <h1>Home</h1>
-      <Link href="/about">
-        <a>Go to about</a>
-      </Link>
-      <p>Welcome to the page</p>
-    </div>
+    <>
+      <GlobalStyle />
+      <Layout title="Home">
+        <p>Welcome to the page</p>
+      </Layout>
+    </>
   );
 }
 
