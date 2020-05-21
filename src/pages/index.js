@@ -1,17 +1,17 @@
 import React from "react";
 
-import Layout from "../components/Layout";
-
 // import { Container } from './styles';
 
 function Index() {
   return (
     <>
-      <Layout title="Home">
-        <p>Welcome to the page</p>
-      </Layout>
+      <p>Welcome to the page</p>
     </>
   );
 }
+
+Index.getInitialProps = async () => {
+  return { title: "Home" };
+};
 
 export default Index;
