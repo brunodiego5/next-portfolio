@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "next/router";
 
 // import { Container } from './styles';
 
@@ -14,9 +15,9 @@ function Post() {
   );
 }
 
-Post.getInitialProps = (props) => {
-  const { title } = props.query;
+Post.getInitialProps = ({ query }) => {
+  const { title } = query;
   return { title };
 };
 
-export default Post;
+export default withRouter(Post);

@@ -3,9 +3,9 @@ import Link from "next/link";
 
 import * as Styled from "./styles";
 
-const PostLink = ({ title }) => (
+const PostLink = ({ slug, title }) => (
   <Styled.ListItem>
-    <Link href={`/post?title=${title}`}>
+    <Link as={`/${slug}`} href={`/post?title=${title}`}>
       <Styled.ListItemLink>{title}</Styled.ListItemLink>
     </Link>
   </Styled.ListItem>
@@ -15,9 +15,9 @@ function Blog() {
   return (
     <Styled.Container>
       <Styled.List>
-        <PostLink title="react" />
-        <PostLink title="angular" />
-        <PostLink title="vue" />
+        <PostLink slug="react-post" title="React Post" />
+        <PostLink slug="angular-post" title="Angular Post" />
+        <PostLink slug="vue-post" title="Vue Post" />
       </Styled.List>
     </Styled.Container>
   );
