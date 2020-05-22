@@ -15,6 +15,9 @@ function Layout({ children, title }) {
         <Link href="/hireme">
           <Styled.Link>Hire Me</Styled.Link>
         </Link>
+        <Link href="/blog">
+          <Styled.Link>Blog</Styled.Link>
+        </Link>
       </Styled.Header>
 
       <h1>{title}</h1>

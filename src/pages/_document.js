@@ -42,7 +42,7 @@ export default class MyDocument extends Document {
           <meta name="robots" content="noindex, nofollow" />
           <meta name="viewport" content="width=device-width" />
 
-          <title>NextPortfolio</title>
+          <title>Portfolio</title>
 
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto"
