@@ -1,18 +1,27 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // import { Container } from './styles';
 
-function About() {
+function About({ user }) {
   return (
     <>
-      <p>A JavaScript programmer</p>
-      <img src="/images/javascript-logo.png" alt="JavaScript" height="200px" />
+      <p>{user.name}</p>
+      <img src={user.avatar_url} alt={user.name} height="200px" />
     </>
   );
 }
 
 About.getInitialProps = async () => {
-  return { title: "About" };
+  const user = await fetch(
+    "https://api.github.com/users/brunodiego5"
+  ).then((response) => response.json());
+
+  return { title: "About", user };
+};
+
+About.propTypes = {
+  user: PropTypes.object,
 };
 
 export default About;
